@@ -3,496 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khmer Technical Lexicon Dictionary</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .search-section {
-            margin-bottom: 40px;
-        }
-        
-        .search-container {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .search-box {
-            flex: 1;
-            min-width: 300px;
-            padding: 15px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 50px;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s ease;
-            background: white;
-        }
-        
-        .search-box:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .filter-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 10px 20px;
-            border: 2px solid #667eea;
-            border-radius: 25px;
-            background: white;
-            color: #667eea;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-        
-        .add-word-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            color: white;
-        }
-        
-        .add-word-section h3 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        
-        .add-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .add-form input, .add-form select {
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            background: rgba(255, 255, 255, 0.9);
-        }
-        
-        .add-btn {
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            border-radius: 25px;
-            color: white;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .add-btn:hover {
-            background: white;
-            color: #f5576c;
-            transform: translateY(-2px);
-        }
-        
-        .results-section {
-            margin-top: 30px;
-        }
-        
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .results-count {
-            font-size: 1.1em;
-            color: #666;
-            font-weight: 500;
-        }
-        
-        .export-btn {
-            padding: 10px 20px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .export-btn:hover {
-            background: #218838;
-            transform: translateY(-2px);
-        }
-        
-        .word-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-        }
-        
-        .word-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .word-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: #667eea;
-        }
-        
-        .word-english {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .word-khmer {
-            font-size: 1.6em;
-            font-weight: 600;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-family: 'Khmer UI', 'Leelawadee UI', sans-serif;
-        }
-        
-        .word-category {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        
-        .word-description {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        
-        .word-reference {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .word-reference:hover {
-            background: #218838;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 60px 20px;
-            color: #666;
-        }
-        
-        .no-results h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .search-container {
-                flex-direction: column;
-            }
-            
-            .search-box {
-                min-width: auto;
-            }
-            
-            .word-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .add-form {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Domra Tech - Khmer Technical Lexicon</title>
+    <meta name="description" content="A comprehensive bilingual technical lexicon bridging English and Khmer terminology in Computer Science, AI, and emerging technologies.">
+    <meta name="keywords" content="Khmer, Technical, Dictionary, Computer Science, AI, Translation, Cambodia">
+    <meta name="author" content="Domra Tech">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇰🇭</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🇰🇭 Domra - Khmer Technical Lexicon</h1>
-            <p>English ↔ Khmer Dictionary for Computer Science & AI Terms</p>
+<body data-theme="light">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <span class="brand-icon">🇰🇭</span>
+                    <span class="brand-text">Domra Tech</span>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </div>
+            </div>
         </div>
-        
-        <div class="search-section">
-            <div class="search-container">
-                <input type="text" class="search-box" id="searchInput" placeholder="Search in English or Khmer... (ស្វែងរក​ជា​ភាសា​អង់គ្លេស ឬ​ខ្មែរ)">
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Khmer Technical Lexicon</h1>
+                <p class="header-subtitle">Bridging English and Khmer terminology in Computer Science, AI, and emerging technologies</p>
+                <div class="header-actions">
+                    <a href="https://github.com/himsoklong/domra_tech" class="btn btn-outline" target="_blank" rel="noopener">
+                        <span>📚</span>
+                        View on GitHub
+                    </a>
+                    <button onclick="openContributeModal()" class="btn btn-primary">
+                        <span>➕</span>
+                        Contribute Terms
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Loading State -->
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <h3>Loading lexicon data...</h3>
+                <p>Please wait while we fetch the latest terms</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="error-message" style="display: none;">
+                <div class="error-icon">❌</div>
+                <h3>Error Loading Data</h3>
+                <p>Please check your internet connection and try again</p>
+                <button onclick="loadData()" class="btn btn-primary">Retry</button>
+            </div>
+
+            <!-- Main Content -->
+            <div id="main-content" style="display: none;">
+                <!-- Stats Section -->
+                <section class="stats-section">
+                    <div id="statsContainer" class="stats-grid">
+                        <!-- Stats will be populated here -->
+                    </div>
+                </section>
+
+                <!-- Search Section -->
+                <section class="search-section">
+                    <div class="search-card">
+                        <div class="search-container">
+                            <input type="text" 
+                                   class="search-box" 
+                                   id="searchInput" 
+                                   placeholder="Search terms in English or Khmer... (ស្វែងរក​ពាក្យ​ជា​ភាសា​អង់គ្លេស ឬ​ខ្មែរ)"
+                                   autocomplete="off">
+                            <div class="search-icon">🔍</div>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <span class="filter-label">Filter by category:</span>
+                            <div id="filterButtons" class="filter-buttons">
+                                <!-- Category buttons will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="results-section">
+                    <div class="results-header">
+                        <div class="results-count" id="resultsCount">0 terms found</div>
+                        <div class="results-actions">
+                            <!-- <button class="btn btn-secondary" onclick="exportJSON()">
+                                <span>📥</span>
+                                Export JSON
+                            </button> -->
+                        </div>
+                    </div>
+                    
+                    <div class="word-grid" id="wordGrid">
+                        <!-- Words will be populated here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <strong>Domra Tech</strong> - Making technology accessible in Khmer
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/himsoklong/domra_tech" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/himsoklong/domra_tech/issues" target="_blank" rel="noopener">Issues</a>
+                    <a href="https://github.com/himsoklong/domra_tech/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contribute Modal -->
+    <div id="contributeModal" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeContributeModal()" class="modal-close" aria-label="Close modal">×</button>
+            
+            <div class="modal-header">
+                <h2>🚀 Contribute to Domra Tech</h2>
+                <p>Help us expand the Khmer technical lexicon! Your contributions make technology more accessible to Khmer speakers worldwide.</p>
             </div>
             
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">All Categories</button>
-                <button class="filter-btn" data-category="AI/ML">AI/ML</button>
-                <button class="filter-btn" data-category="Programming">Programming</button>
-                <button class="filter-btn" data-category="Data Science">Data Science</button>
-                <button class="filter-btn" data-category="Web Development">Web Development</button>
-                <button class="filter-btn" data-category="Computer Science">Computer Science</button>
-            </div>
-        </div>
-        
-        <div class="add-word-section">
-            <h3>📝 Add New Technical Term</h3>
-            <div class="add-form">
-                <input type="text" id="englishWord" placeholder="English Term">
-                <input type="text" id="khmerWord" placeholder="Khmer Term (ពាក្យ​ខ្មែរ)">
-                <select id="categorySelect">
-                    <option value="AI/ML">AI/ML</option>
-                    <option value="Programming">Programming</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Computer Science">Computer Science</option>
-                </select>
-                <input type="text" id="descriptionInput" placeholder="Description (optional)">
-                <input type="text" id="referenceInput" placeholder="GitHub Reference URL">
-            </div>
-            <button class="add-btn" onclick="addWord()">Add Term</button>
-        </div>
-        
-        <div class="results-section">
-            <div class="results-header">
-                <div class="results-count" id="resultsCount">0 terms found</div>
-                <button class="export-btn" onclick="exportData()">Export JSON</button>
+            <div class="contribution-options">
+                <div class="contribution-card">
+                    <div class="contribution-icon">📝</div>
+                    <h4>Add New Terms</h4>
+                    <p>Submit new technical terms with accurate Khmer translations</p>
+                    <a href="https://github.com/himsoklong/domra_tech/issues/new?template=new-term-request.md" 
+                       target="_blank" 
+                       rel="noopener"
+                       class="btn btn-primary">Submit Term</a>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-icon">✏️</div>
+                    <h4>Improve Translations</h4>
+                    <p>Suggest better translations for existing terms</p>
+                    <a href="https://github.com/himsoklong/domra_tech/issues/new?template=translation-improvement.md" 
+                       target="_blank" 
+                       rel="noopener"
+                       class="btn btn-primary">Improve Translation</a>
+                </div>
             </div>
             
-            <div class="word-grid" id="wordGrid">
-                <!-- Words will be populated here -->
+            <div class="contribution-guidelines">
+                <h4>📊 Contribution Guidelines</h4>
+                <p>Please ensure translations are accurate, culturally appropriate, and technically correct. All contributions are reviewed before being merged.</p>
             </div>
         </div>
     </div>
 
-    <script>
-        // Sample data - you can replace this with your actual data
-        let lexiconData = [
-            {
-                english: "Artificial Intelligence",
-                khmer: "បញ្ញាសិប្បនិម្មិត",
-                category: "AI/ML",
-                description: "The simulation of human intelligence in machines that are programmed to think and learn.",
-                reference: "https://github.com/yourusername/ai-resources/blob/main/ai-overview.md"
-            },
-            {
-                english: "Machine Learning",
-                khmer: "សិក្ខាម៉ាស៊ីន",
-                category: "AI/ML",
-                description: "A subset of AI that enables computers to learn and improve from experience without being explicitly programmed.",
-                reference: "https://github.com/yourusername/ml-resources/blob/main/ml-basics.md"
-            },
-            {
-                english: "Deep Learning",
-                khmer: "សិក្ខាម៉ាស៊ីនបែបស៊ីជម្រៅ",
-                category: "AI/ML",
-                description: "A subset of machine learning using neural networks with multiple layers.",
-                reference: "https://github.com/yourusername/deep-learning/blob/main/intro.md"
-            },
-            {
-                english: "Natural Language Processing",
-                khmer: "ដំណើរការភាសាបែបធម្មជាតិ",
-                category: "AI/ML",
-                description: "The application of computational techniques to the analysis and synthesis of natural language and speech. Natural Language Processing (NLP) is a branch of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language",
-                reference: "https://github.com/yourusername/algorithms/blob/main/introduction.md"
-            },
-            {
-                english: "Database",
-                khmer: "មូលដ្ឋានទិន្នន័យ",
-                category: "Data Science",
-                description: "A structured collection of data that is stored and accessed electronically.",
-                reference: "https://github.com/yourusername/database-concepts/blob/main/database-intro.md"
-            },
-            {
-                english: "API",
-                khmer: "ចំណុចតភ្ជាប់កម្មវិធី",
-                category: "Web Development",
-                description: "Application Programming Interface - a set of protocols and tools for building software applications.",
-                reference: "https://github.com/yourusername/api-guide/blob/main/api-basics.md"
-            }
-        ];
-
-        let currentFilter = 'all';
-        let currentSearch = '';
-
-        function renderWords() {
-            const grid = document.getElementById('wordGrid');
-            const resultsCount = document.getElementById('resultsCount');
-            
-            // Filter words based on search and category
-            let filteredWords = lexiconData.filter(word => {
-                const matchesSearch = currentSearch === '' || 
-                    word.english.toLowerCase().includes(currentSearch.toLowerCase()) ||
-                    word.khmer.includes(currentSearch) ||
-                    word.description.toLowerCase().includes(currentSearch.toLowerCase());
-                
-                const matchesCategory = currentFilter === 'all' || word.category === currentFilter;
-                
-                return matchesSearch && matchesCategory;
-            });
-            
-            resultsCount.textContent = `${filteredWords.length} terms found`;
-            
-            if (filteredWords.length === 0) {
-                grid.innerHTML = `
-                    <div class="no-results">
-                        <h3>No terms found</h3>
-                        <p>Try adjusting your search or filter criteria</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            grid.innerHTML = filteredWords.map(word => `
-                <div class="word-card">
-                    <div class="word-english">${word.english}</div>
-                    <div class="word-khmer">${word.khmer}</div>
-                    <div class="word-category">${word.category}</div>
-                    <div class="word-description">${word.description}</div>
-                    <a href="${word.reference}" class="word-reference" target="_blank">📂 View Reference</a>
-                </div>
-            `).join('');
-        }
-
-        function addWord() {
-            const english = document.getElementById('englishWord').value.trim();
-            const khmer = document.getElementById('khmerWord').value.trim();
-            const category = document.getElementById('categorySelect').value;
-            const description = document.getElementById('descriptionInput').value.trim() || 'No description provided';
-            const reference = document.getElementById('referenceInput').value.trim();
-            
-            if (!english || !khmer) {
-                alert('Please provide both English and Khmer terms');
-                return;
-            }
-            
-            const newWord = {
-                english,
-                khmer,
-                category,
-                description,
-                reference: reference || '#'
-            };
-            
-            lexiconData.push(newWord);
-            
-            // Clear form
-            document.getElementById('englishWord').value = '';
-            document.getElementById('khmerWord').value = '';
-            document.getElementById('descriptionInput').value = '';
-            document.getElementById('referenceInput').value = '';
-            
-            renderWords();
-            
-            // Show success message
-            alert('Term added successfully! 🎉');
-        }
-
-        function exportData() {
-            const dataStr = JSON.stringify(lexiconData, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            const url = URL.createObjectURL(dataBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'khmer-tech-lexicon.json';
-            link.click();
-            URL.revokeObjectURL(url);
-        }
-
-        // Event listeners
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            currentSearch = e.target.value;
-            renderWords();
-        });
-
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                currentFilter = e.target.dataset.category;
-                renderWords();
-            });
-        });
-
-        // Initial render
-        renderWords();
-    </script>
+    <!-- JavaScript -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

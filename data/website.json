@@ -1,0 +1,59 @@
+{
+  "project": {
+    "name": "Domra Tech",
+    "fullName": "Domra Tech - Khmer Technical Lexicon",
+    "version": "0.0.1",
+    "description": "A comprehensive bilingual technical lexicon bridging English and Khmer terminology in Computer Science, AI, and emerging technologies.",
+    "tagline": "Where Technology Speaks Khmer",
+    "created": "2025-01-01",
+    "lastUpdated": "2025-07-10"
+  },
+  "repository": {
+    "url": "https://github.com/himsoklong/domra-tech",
+    "owner": "himsoklong",
+    "name": "domra-tech",
+    "branch": "main"
+  },
+  "website": {
+    "url": "https://himsoklong.github.io/domra-tech",
+    "title": "Domra Tech - Khmer Technical Lexicon",
+    "keywords": ["Khmer", "Technical", "Dictionary", "Computer Science", "AI", "Translation"],
+    "language": "en",
+    "author": "HIM Soklong"
+  },
+  "social": {
+    "github": "https://github.com/himsoklong/domra-tech",
+    "twitter": "@yourusername",
+    "email": "longhim99@gmail.com"
+  },
+  "contribution": {
+    "guidelines": "https://github.com/himsoklong/domra-tech/blob/main/CONTRIBUTING.md",
+    "newTermTemplate": "https://github.com/himsoklong/domra-tech/issues/new?template=new-term-request.md",
+    "improvementTemplate": "https://github.com/himsoklong/domra-tech/issues/new?template=translation-improvement.md",
+    "discussionsUrl": "https://github.com/himsoklong/domra-tech/discussions"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/himsoklong/domra-tech/blob/main/LICENSE"
+  },
+  "statistics": {
+    "totalTerms": 15,
+    "totalCategories": 5,
+    "totalContributors": 1,
+    "lastTermAdded": "2025-01-03",
+    "mostActiveCategory": "AI/ML"
+  },
+  "features": {
+    "search": true,
+    "filtering": true,
+    "export": true,
+    "darkMode": true,
+    "responsive": true,
+    "githubIntegration": true
+  },
+  "languages": {
+    "primary": "en",
+    "secondary": "km",
+    "supported": ["en", "km"]
+  }
+}

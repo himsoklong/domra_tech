@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-07-10",
+    "totalTerms": 25,
+    "license": "MIT"
+  },
+  "terms": [
+    {
+      "id": "ai-001",
+      "english": "Artificial Intelligence",
+      "khmer": "បញ្ញាសិប្បនិម្មិត",
+      "category": "AI/ML",
+      "description": "The simulation of human intelligence in machines that are programmed to think and learn like humans.",
+      "examples": {
+        "english": "AI is revolutionizing healthcare diagnosis.",
+        "khmer": "បញ្ញាសិប្បនិម្មិតកំពុងធ្វើបដិវត្តន៍ការធ្វើរោគវិនិច្ឆ័យសុខាភិបាល។"
+      },
+      "tags": ["core", "fundamental", "popular"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra_tech/blob/main/docs/terms/ai-ml/artificial-intelligence.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "ai-002",
+      "english": "Machine Learning",
+      "khmer": "សិក្ខាម៉ាស៊ីន",
+      "category": "AI/ML",
+      "description": "A subset of AI that enables computers to learn and improve from experience without being explicitly programmed.",
+      "examples": {
+        "english": "Machine learning algorithms can predict customer behavior.",
+        "khmer": "ក្បួនដោះស្រាយការរៀនសូត្រអាចទស្សន៍ទាយអាកប្បកិរិយាអតិថិជន។"
+      },
+      "tags": ["core", "popular", "algorithms"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra_tech/blob/main/docs/terms/ai-ml/machine-learning.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "ai-003",
+      "english": "Deep Learning",
+      "khmer": "សិក្ខាម៉ាស៊ីនបែបស៊ីជម្រៅ",
+      "category": "AI/ML",
+      "description": "A subset of machine learning using neural networks with multiple layers to model and understand complex patterns.",
+      "examples": {
+        "english": "Deep learning powers modern image recognition systems.",
+        "khmer": "សិក្ខាម៉ាស៊ីនបែបស៊ីជម្រៅជំរុញប្រព័ន្ធសម្គាល់រូបភាពទំនើប។"
+      },
+      "tags": ["advanced", "neural-networks", "popular"],
+      "difficulty": "advanced",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/ai-ml/deep-learning.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "ai-004",
+      "english": "Natural Language Processing",
+      "khmer": "ដំណើរការភាសាបែបធម្មជាតិ",
+      "category": "AI/ML",
+      "description": "The application of computational techniques to the analysis and synthesis of natural language and speech. Natural Language Processing (NLP) is a branch of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language.",
+      "examples": {
+        "english": "",
+        "khmer": ""
+      },
+      "tags": ["fundamental", "networks", "biology-inspired"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/ai-ml/neural-network.md",
+      "dateAdded": "2025-01-02",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "prog-001",
+      "english": "Algorithm",
+      "khmer": "ក្បួនដោះស្រាយ",
+      "category": "Programming",
+      "description": "A step-by-step procedure or formula for solving a problem or completing a task.",
+      "examples": {
+        "english": "The sorting algorithm arranges data efficiently.",
+        "khmer": "ក្បួនដោះស្រាយការតម្រៀបរៀបចំទិន្នន័យប្រកបដោយប្រសិទ្ធភាព។"
+      },
+      "tags": ["fundamental", "core", "problem-solving"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/programming/algorithm.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "prog-002",
+      "english": "Variable",
+      "khmer": "អថេរ",
+      "category": "Programming",
+      "description": "A storage location with an associated symbolic name that contains data or information.",
+      "examples": {
+        "english": "The variable stores the user's age.",
+        "khmer": "អថេររក្សាទុកអាយុរបស់អ្នកប្រើប្រាស់។"
+      },
+      "tags": ["basic", "fundamental", "data"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/programming/variable.md",
+      "dateAdded": "2025-01-02",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "prog-003",
+      "english": "Function",
+      "khmer": "អនុគមន៍",
+      "category": "Programming",
+      "description": "A reusable block of code that performs a specific task and can accept inputs and return outputs.",
+      "examples": {
+        "english": "The function calculates the total price.",
+        "khmer": "អនុគមន៍គណនាតម្លៃសរុប។"
+      },
+      "tags": ["fundamental", "reusable", "modularity"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/programming/function.md",
+      "dateAdded": "2025-01-02",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "data-001",
+      "english": "Database",
+      "khmer": "មូលដ្ឋានទិន្នន័យ",
+      "category": "Data Science",
+      "description": "A structured collection of data that is stored and accessed electronically from a computer system.",
+      "examples": {
+        "english": "The database stores user information securely.",
+        "khmer": "មូលដ្ឋានទិន្នន័យរក្សាទុកព័ត៌មានអ្នកប្រើប្រាស់ដោយសុវត្ថិភាព។"
+      },
+      "tags": ["storage", "fundamental", "data-management"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/data-science/database.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "data-002",
+      "english": "Big Data",
+      "khmer": "ទិន្នន័យធំ",
+      "category": "Data Science",
+      "description": "Extremely large datasets that require specialized tools and techniques to process and analyze.",
+      "examples": {
+        "english": "Big data analytics help companies understand customer trends.",
+        "khmer": "ការវិភាគទិន្នន័យធំជួយក្រុមហ៊ុនយល់ដឹងពីនិន្នាការអតិថិជន។"
+      },
+      "tags": ["volume", "analytics", "enterprise"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/data-science/big-data.md",
+      "dateAdded": "2025-01-03",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "web-001",
+      "english": "API",
+      "khmer": "ចំណុចតភ្ជាប់កម្មវិធី",
+      "category": "Web Development",
+      "description": "Application Programming Interface - a set of protocols and tools for building software applications.",
+      "examples": {
+        "english": "The API allows different applications to communicate.",
+        "khmer": "ចំណុចតភ្ជាប់កម្មវិធីអនុញ្ញាតឱ្យកម្មវិធីផ្សេងៗទំនាក់ទំនងគ្នា។"
+      },
+      "tags": ["integration", "communication", "interface"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/web-dev/api.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "web-002",
+      "english": "Frontend",
+      "khmer": "ផ្នែកខាងមុខ",
+      "category": "Web Development",
+      "description": "The part of a web application that users interact with directly in their browser.",
+      "examples": {
+        "english": "The frontend provides a beautiful user interface.",
+        "khmer": "ផ្នែកខាងមុខផ្តល់នូវចំណុចប្រទាក់អ្នកប្រើប្រាស់ដ៏ស្រស់ស្អាត។"
+      },
+      "tags": ["user-interface", "client-side", "visual"],
+      "difficulty": "beginner",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/web-dev/frontend.md",
+      "dateAdded": "2025-01-02",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "web-003",
+      "english": "Backend",
+      "khmer": "ផ្នែកខាងក្រោយ",
+      "category": "Web Development",
+      "description": "The server-side part of a web application that handles data processing and business logic.",
+      "examples": {
+        "english": "The backend processes user authentication.",
+        "khmer": "ផ្នែកខាងក្រោយដំណើរការការផ្ទៀងផ្ទាត់អ្នកប្រើប្រាស់។"
+      },
+      "tags": ["server-side", "data-processing", "logic"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/web-dev/backend.md",
+      "dateAdded": "2025-01-02",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "cs-001",
+      "english": "Operating System",
+      "khmer": "ប្រព័ន្ធប្រតិបត្តិការ",
+      "category": "Computer Science",
+      "description": "System software that manages computer hardware and software resources and provides common services.",
+      "examples": {
+        "english": "The operating system manages memory and processes.",
+        "khmer": "ប្រព័ន្ធប្រតិបត្តិការគ្រប់គ្រងអង្គចងចាំ និងដំណើរការ។"
+      },
+      "tags": ["system", "management", "fundamental"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/computer-science/operating-system.md",
+      "dateAdded": "2025-01-01",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "cs-002",
+      "english": "Cloud Computing",
+      "khmer": "ការគណនាពពក",
+      "category": "Computer Science",
+      "description": "The delivery of computing services over the internet including storage, processing power, and applications.",
+      "examples": {
+        "english": "Cloud computing enables remote data storage.",
+        "khmer": "ការគណនាពពកអនុញ្ញាតឱ្យរក្សាទុកទិន្នន័យពីចម្ងាយ។"
+      },
+      "tags": ["internet", "remote", "services"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/computer-science/cloud-computing.md",
+      "dateAdded": "2025-01-03",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    },
+    {
+      "id": "cs-003",
+      "english": "Cybersecurity",
+      "khmer": "សុវត្ថិភាពអ៊ីនធឺណិត",
+      "category": "Computer Science",
+      "description": "The practice of protecting systems, networks, and programs from digital attacks.",
+      "examples": {
+        "english": "Cybersecurity protects sensitive information.",
+        "khmer": "សុវត្ថិភាពអ៊ីនធឺណិតការពារព័ត៌មានសម្ងាត់។"
+      },
+      "tags": ["security", "protection", "network"],
+      "difficulty": "intermediate",
+      "reference": "https://github.com/himsoklong/domra-tech/blob/main/docs/terms/computer-science/cybersecurity.md",
+      "dateAdded": "2025-01-03",
+      "contributors": ["initial-data"],
+      "status": "verified"
+    }
+  ]
+}

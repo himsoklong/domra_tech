@@ -1,0 +1,69 @@
+{
+  "categories": {
+    "AI/ML": {
+      "name": {
+        "english": "AI & Machine Learning",
+        "khmer": "បញ្ញាត្រិម និងការរៀនសូត្រ"
+      },
+      "description": {
+        "english": "Artificial intelligence, machine learning, and neural network technologies",
+        "khmer": "បច្ចេកវិទ្យាបញ្ញាត្រិម ការរៀនសូត្រ និងបណ្តាញសរសៃប្រសាទ"
+      },
+      "color": "#667eea",
+      "icon": "🤖",
+      "termCount": 4
+    },
+    "Programming": {
+      "name": {
+        "english": "Programming",
+        "khmer": "កម្មវិធីសរសេរ"
+      },
+      "description": {
+        "english": "Programming languages, concepts, and development practices",
+        "khmer": "ភាសាកម្មវិធី គោលគំនិត និងការអនុវត្តអភិវឌ្ឍន៍"
+      },
+      "color": "#f093fb",
+      "icon": "💻",
+      "termCount": 3
+    },
+    "Data Science": {
+      "name": {
+        "english": "Data Science",
+        "khmer": "វិទ្យាសាស្ត្រទិន្នន័យ"
+      },
+      "description": {
+        "english": "Data analysis, statistics, and data management technologies",
+        "khmer": "ការវិភាគទិន្នន័យ ស្ថិតិ និងបច្ចេកវិទ្យាគ្រប់គ្រងទិន្នន័យ"
+      },
+      "color": "#28a745",
+      "icon": "📊",
+      "termCount": 2
+    },
+    "Web Development": {
+      "name": {
+        "english": "Web Development",
+        "khmer": "ការអភិវឌ្ឍន៍គេហទំព័រ"
+      },
+      "description": {
+        "english": "Web technologies, frameworks, and development tools",
+        "khmer": "បច្ចេកវិទ្យាគេហទំព័រ ក្របខ័ណ្ឌ និងឧបករណ៍អភិវឌ្ឍន៍"
+      },
+      "color": "#fd7e14",
+      "icon": "🌐",
+      "termCount": 3
+    },
+    "Computer Science": {
+      "name": {
+        "english": "Computer Science",
+        "khmer": "វិទ្យាសាស្ត្រកុំព្យូទ័រ"
+      },
+      "description": {
+        "english": "Fundamental computer science concepts and system technologies",
+        "khmer": "គោលគំនិតមូលដ្ឋាន និងបច្ចេកវិទ្យាប្រព័ន្ធកុំព្យូទ័រ"
+      },
+      "color": "#6610f2",
+      "icon": "🔬",
+      "termCount": 3
+    }
+  }
+}
